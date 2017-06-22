@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js" type="text/javascript"></script>
+    <img width =200 height=100 vspace="0" src = "paypal.png"/>
+    <title>Request Management</title>
+  </head>
+
+  <body>
+    <div>
+
+      <div class="container">
+
+         <div id="inst">Make selections and send requests</div>
+          <select class="form-control" id="tenant" style="width:auto;">
+            <option value="" disabled selected>Choose your tenant</option>
+            <option>Tenant 1</option>
+            <option>Tenant 2</option>
+            <option>Tenant 3</option>
+            <option>Tenant 4</option>
+          </select>
+
+        <div class = "buttonHolder w3-ripple">
+          <input type="submit" value = "Submit" id="sm" onclick="popup()">
+        </div>
+    </div>
+
+<!-- REQUEST FORM -->
+    <div class ="container initially-hidden">
+      <form class="form-horizontal">
+
+        <div class="form-group">
+          <label for = "disable">Tenant</label>
+          <input type= "text" class ="form-control" placeholder="init" id = "disable" disabled>
+        </div>
+
+        <div class="form-group">
+          <label for = "pool">Pool</label>
+          <input type= "text" class ="form-control" id = "pool" >
+        </div>
+
+        <div class="form-group">
+          <label for = "vpc">VPC</label>
+          <select class="form-control" id="vpc">
+            <option>ppmid</option>
+            <option>ppmid_tvpc</option>
+            <option>ppmid_cfbt</option>
+            <option>ppdcn</option>
+            <option>ppdcn_mgmt</option>
+            <option>ppdcn_tools</option>
+            <option>ppdcn_netsec</option>
+            <option>ppweb</option>
+            <option>ppweb_tvpc</option>
+            <option>ppweb_cfbt</option>
+            <option>ppsandbox</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for = "image">Image</label>
+          <select class="form-control" id="image">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for = "count">Count</label>
+          <input type= "text" class ="form-control" id = "count" >
+        </div>
+
+        <div class="form-group">
+          <label for = "flavor">Flavor</label>
+          <select class="form-control" id="flavor">
+            <option>large</option>
+            <option>small</option>
+            <option>x-large</option>
+            <option>m1.xlarge</option>
+            <option>medium</option>
+            <option>mirantis-xsmall</option>
+            <option>xx-large</option>
+            <option>x-small</option>
+            <option>jumbo</option>
+            <option>g1-micro</option>
+            <option>g1-standard</option>
+            <option>g1-highmem</option>
+            <option>g1-highcpu</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for = "userdata">userData</label>
+          <input type= "text" class ="form-control" id = "userdata" >
+        </div>
+
+        <div class = "buttonHolder">
+          <input type="submit" value = "Request" id="submit-button">
+        </div>
+      </form>
+    </div>
+   
+<!-- TABLE FIELD -->
+    <div id="table" class="initially-hidden">  
+      <table border="1" width="700px" id="t1">  
+        <thead>
+          <tr width="90px">
+            <th>Request id</th>
+            <th>Tenant</th>
+            <th>VPC</th>
+            <th>Pool</th>
+            <th>Image</th>
+            <th>Count</th>
+            <th>Flavor</th>
+            <th>Userdata</th>
+            <th>Status</th>
+            <th>Cancel</th>
+          </tr>
+        </thead>
+        <tbody>
+         
+        </tbody>
+      </table>  
+    </div>  
+   
+  </body>
+</html>
